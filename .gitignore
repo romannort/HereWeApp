@@ -6,6 +6,9 @@
 *.user
 *.sln.docstates
 
+# VS2015 settings ? 
+.vs/
+
 # Build results
 
 [Dd]ebug/
