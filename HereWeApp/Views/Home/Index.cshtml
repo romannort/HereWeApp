@@ -2,27 +2,16 @@
     ViewBag.Title = "Main Page";
 }
 
-<div class="jumbotron">
-    <h1>Next event - #1 in 1 minute</h1>    
-</div>
+<div class="col">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Next event</h2>
-        <p>
-            Event 19 - In 5 minutes
-        </p>        
-    </div>
-    <div class="col-md-4">
-        <h2>Next event</h2>
-        <p>
-            Event 20 - In 5 minutes
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Next event</h2>
-        <p>
-            Event 21 - In 5 minutes
-        </p>
-    </div>
+    @foreach (HereWeApp.Models.SomeEventViewModel item in Model)
+    {
+        <div class="col-md-4">
+            <h2>@item.Description</h2>
+            <p>
+                in @item.Countdown.Minutes minutes
+            </p>
+        </div>
+    }
+
 </div>
