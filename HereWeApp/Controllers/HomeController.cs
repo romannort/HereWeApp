@@ -8,22 +8,10 @@ namespace HereWeApp.Controllers
 {
     public class HomeController : Controller
     {
+        [OutputCache(Duration = 30, Location = System.Web.UI.OutputCacheLocation.Any)]
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
+            ViewBag.Title = "HereWeApp";
             return View();
         }
     }
